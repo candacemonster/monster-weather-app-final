@@ -22,7 +22,7 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
-  console.log(response.data);
+  console.log(response);
   let temperatureElement = document.querySelector("#temperature");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
@@ -31,6 +31,7 @@ function displayTemperature(response) {
   let sunriseElement = document.querySelector("#sunrise");
   let sunsetElement = document.querySelector("#sunset");
   let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   humidityElement.innerHTML = response.data.main.humidity;
@@ -40,6 +41,11 @@ function displayTemperature(response) {
   sunriseElement.innerHTML = formatDate(response.data.sys.sunrise * 1000);
   sunsetElement.innerHTML = formatDate(response.data.sys.sunset * 1000);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 let apiKey = "898368c8b82c44ea298ea746725fa93a";
@@ -47,4 +53,5 @@ let city = "Portland";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 console.log(apiUrl);
+
 axios.get(apiUrl).then(displayTemperature);

@@ -1,14 +1,15 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  color: #9987a9;
+  background-color: #0c0c0c;
 }
 
 h1 {
-  color: #878787;
+  color: #9987a9;
   display: block;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 100;
   line-height: 28px;
-  text-align: left;
 }
 
 ul {
@@ -20,27 +21,31 @@ li {
   list-style: none;
   margin: 0;
   padding: 0;
-  color: #878787;
+  color: #9987a9;
   font-size: 16px;
   font-weight: 100;
-  line-height: 19px;
-  text-align: left;
+  line-height: 20px;
 }
 li:first-letter {
   text-transform: capitalize;
 }
 
+.container {
+  max-width: 650px;
+}
+
 .weather-app-wrapper {
-  max-width: 800px;
+  max-width: 650px;
   margin: 30px auto;
 }
 .weather-app {
   padding: 20px;
-  border: 1px solid #dadde1;
+  border: 1px solid #878787;
   border-radius: 5px;
 }
 .overview {
-  margin-bottom: 20px;
+  margin: 20px;
+  text-align: center;
 }
 
 .weather-temperature img {
@@ -50,16 +55,16 @@ li:first-letter {
 }
 
 .weather-temperature strong {
-  color: rgb(33, 35, 33);
-  font-size: 64px;
+  color: #9987a9;
+  font-size: 32px;
   line-height: 1;
   font-weight: 400;
 }
 
 .weather-temperature .units {
   position: relative;
-  font-size: 16px;
-  top: -34px;
+  font-size: 14px;
+  top: -14px;
 }
 
 .sun-moon-wrapper {
@@ -68,9 +73,9 @@ li:first-letter {
 }
 
 .sun {
-  max-width: 390px;
+  max-width: 316px;
   margin: 10px;
-  border: 1px solid #dadde1;
+  border: 1px solid #878787;
   border-radius: 5px;
 }
 .sun li {
@@ -80,8 +85,8 @@ li:first-letter {
 }
 
 .moon {
-  max-width: 390px;
+  max-width: 316px;
   margin: 10px;
-  border: 1px solid #dadde1;
+  border: 1px solid #878787;
   border-radius: 5px;
 }
