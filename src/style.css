@@ -31,7 +31,7 @@ li:first-letter {
 }
 
 .container {
-  max-width: 650px;
+  max-width: 675px;
 }
 
 .weather-app-wrapper {
@@ -74,7 +74,7 @@ li:first-letter {
 
 .sun {
   max-width: 316px;
-  margin: 10px;
+  margin: 8px;
   border: 1px solid #878787;
   border-radius: 5px;
 }
@@ -86,7 +86,7 @@ li:first-letter {
 
 .moon {
   max-width: 316px;
-  margin: 10px;
+  margin: 8px;
   border: 1px solid #878787;
   border-radius: 5px;
 }
