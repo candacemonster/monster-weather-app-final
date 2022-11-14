@@ -20,7 +20,7 @@
     <div class="container">
       <div class="row">
         <div class="col-8">
-          <form id="search-form" class="mb-3">
+          <form id="search-form" class="mb-3 search-bar">
             <input
               type="search"
               placeholder="Enter city..."
@@ -31,7 +31,11 @@
           </form>
         </div>
         <div class="col-4">
-          <input type="submit" value="Search" class="btn btn-primary w-100" />
+          <input
+            type="submit"
+            value="Search"
+            class="btn btn-primary w-100 search-bar"
+          />
         </div>
       </div>
       <div class="overview">
@@ -50,16 +54,9 @@
                 <div class="combo-temp-units">
                   <strong id="temperature"></strong
                   ><span class="units"
-                    ><a href="#" id="celsius-conversion" class="active-templink"
-                      >°C</a
-                    >
+                    ><a href="#" id="celsius-conversion" class="active">°C</a>
                     |
-                    <a
-                      href="#"
-                      id="fahrenheit-conversion"
-                      class="active-templink"
-                      >°F</a
-                    ></span
+                    <a href="#" id="fahrenheit-conversion">°F</a></span
                   >
                 </div>
               </div>
