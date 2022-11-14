@@ -47,17 +47,19 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-function search(event) {
-  event.preventDefault();
-  let cityInputElement = document.querySelector("#city-name");
-  console.log(cityInputElement.value);
+function search(city) {
+  let apiKey = "898368c8b82c44ea298ea746725fa93a";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
 }
 
-let apiKey = "898368c8b82c44ea298ea746725fa93a";
-let city = "Portland";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-name");
+  search(cityInputElement.value);
+}
 
-axios.get(apiUrl).then(displayTemperature);
+search("Portland");
 
 let form = document.querySelector("#search-form");
-form.addEventListener("submit", search);
+form.addEventListener("submit", handleSubmit);
