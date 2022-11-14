@@ -5,7 +5,7 @@ body {
 }
 
 h1 {
-  color: #9987a9;
+  color: #d2c6db;
   display: block;
   font-size: 32px;
   font-weight: 100;
@@ -44,14 +44,14 @@ li:first-letter {
   border-radius: 5px;
 }
 .overview {
-  margin: 20px;
+  margin: 30px;
   text-align: center;
 }
 
 .weather-temperature img {
   margin-right: 15px;
-  height: 64px;
-  width: 64px;
+  height: 72px;
+  width: 72px;
 }
 
 .weather-temperature strong {
@@ -65,6 +65,19 @@ li:first-letter {
   position: relative;
   font-size: 14px;
   top: -14px;
+}
+
+.combo-temp-units {
+  margin-top: 22px;
+}
+
+.weather-temperature .active-templink {
+  text-decoration: none;
+  color: #9987a9;
+  cursor: default;
+}
+.weather-temperature .active-templink:hover {
+  text-decoration: none;
 }
 
 .sun-moon-wrapper {
