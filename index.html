@@ -12,95 +12,104 @@
       crossorigin="anonymous"
     />
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-
     <link rel="stylesheet" href="src/style.css" />
+
     <title>monster weather</title>
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-8">
-          <form id="search-form" class="mb-3 search-bar">
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4 left-container">
+            <br />
+            <form id="search-form" class="mb-3 search-bar">
+              <input
+                type="search"
+                placeholder="Where you at???"
+                class="form-control"
+                id="city-name"
+                autocomplete="off"
+              />
+            </form>
             <input
-              type="search"
-              placeholder="Enter city..."
-              class="form-control"
-              id="city-name"
-              autocomplete="off"
+              type="submit"
+              value="Search"
+              class="btn btn-primary w-100 search-bar"
             />
-          </form>
-        </div>
-        <div class="col-4">
-          <input
-            type="submit"
-            value="Search"
-            class="btn btn-primary w-100 search-bar"
-          />
-        </div>
-      </div>
-      <div class="overview">
-        <h1 id="city"></h1>
-        <ul>
-          <li>Last updated on <span id="date"></span></li>
-          <li id="weatherDescription"></li>
-        </ul>
-      </div>
-      <div class="weather-app-wrapper">
-        <div class="weather-app">
-          <div class="row">
-            <div class="col-6">
-              <div class="d-flex weather-temperature">
-                <img src="" alt="" id="icon" />
-                <div class="combo-temp-units">
-                  <strong id="temperature"></strong
-                  ><span class="units"
-                    ><a href="#" id="celsius-conversion" class="active">°C</a>
-                    |
-                    <a href="#" id="fahrenheit-conversion">°F</a></span
-                  >
+            <div class="overview">
+              <h1 id="city"></h1>
+              <div class="weather-app">
+                <div class="d-flex weather-temperature">
+                  <img src="" alt="" id="icon" />
+                  <div class="combo-temp-units">
+                    <strong id="temperature"></strong
+                    ><span class="units"
+                      ><a href="#" id="celsius-conversion" class="active">°C</a>
+                      |
+                      <a href="#" id="fahrenheit-conversion">°F</a></span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div>
+                <ul>
+                  <li id="weatherDescription"></li>
+                  <br />
+                  <li>Last updated on <span id="date"></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 right-container">
+            <div class="row">
+              <div class="weather-app-wrapper">
+                <div class="forecast" id="forecast"></div>
+                <div class="row daily-highlight">
+                  <div class="col-2">
+                    <div class="daily-items">
+                      Real Feel:<span id="real-feel"></span>°
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <div class="daily-items">
+                      Humidity: <span id="humidity"></span>%
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <div class="daily-items">
+                      Wind speed: <span id="wind"></span> km/h
+                    </div>
+                  </div>
+                  <div class="col-2 sun">
+                    <div class="daily-items">Sunrise</div>
+                    <ul>
+                      <li class="sun" id="sunrise"></li>
+                    </ul>
+                  </div>
+                  <div class="col-2 sun">
+                    <div class="daily-items">Sunset</div>
+                    <ul>
+                      <li class="sun" id="sunset"></li>
+                    </ul>
+                  </div>
+                  <div class="col-2 moon">
+                    <div class="daily-items">Moonphase</div>
+                    <div id="moonphase" class="moon-phase"></div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-6">
-              <ul>
-                <li>Real Feel: <span id="real-feel"></span>°</li>
-
-                <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind speed: <span id="wind"></span> km/h</li>
-              </ul>
-            </div>
-          </div>
-          <div class="forecast" id="forecast">
-            <div class="row"></div>
           </div>
         </div>
-        <div class="sun-moon-wrapper">
-          <div class="row">
-            <div class="col-6 sun">
-              <h2>Sunrise</h2>
-              <ul>
-                <li class="sun" id="sunrise"></li>
-              </ul>
-              <h2>Sunset</h2>
-              <ul>
-                <li class="sun" id="sunset"></li>
-              </ul>
-            </div>
-            <div class="col-6 moon">
-              <h2>Moonphase</h2>
-              <div id="moonphase" class="moon-phase"></div>
-            </div>
-          </div>
-        </div>
-        <small>
-          An
-          <a href="https://github.com/candacemonster/monster-weather-app-final"
-            >open-source code</a
-          >
-          by Candace
-        </small>
       </div>
     </div>
+    <footer>
+      An
+      <a href="https://github.com/candacemonster/monster-weather-app-final"
+        >open-source code</a
+      >
+      by Candace
+    </footer>
     <script src="src/app.js"></script>
   </body>
 </html>
