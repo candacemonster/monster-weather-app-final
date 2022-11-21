@@ -146,8 +146,8 @@ a:any-link {
 .daily-items {
   font-size: 14px;
   text-align: center;
+  padding-top: 18px;
 }
-
-.humidity {
-  padding-top: 15px;
+.daily {
+  margin-top: 25px;
 }
