@@ -65,6 +65,8 @@ function displayForecast(response) {
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+  let moonElement = document.querySelector("#moonphase");
+  moonElement.innerHTML = response.data.daily[0].moon_phase;
 }
 
 function getForecast(coordinates) {
