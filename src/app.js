@@ -29,10 +29,31 @@ function formatDay(timestamp) {
   return days[day];
 }
 
+function getMoonPhase(moon_phase) {
+  let moonElement = document.querySelector("#moonphase");
+  if (moon_phase <= 0.25) {
+    //quarter moon emoji
+    moonElement.innerHTML = ":first_quarter_moon: First Quarter";
+  } else if (moon_phase <= 0.5) {
+    //half moon emoji
+    moonElement.innerHTML = ":full_moon: Full";
+  } else if (moon_phase <= 0.75) {
+    //three quarters moon emoji
+    moonElement.innerHTML = ":last_quarter_moon: Last Quarter";
+  } else if (moon_phase > 0.75 && moon_phase < 1) {
+    moonElement.innerHTML = "\uD83C\uDF18";
+  } else if (moon_phase > 0 && moon_phase < 1) {
+    //full moon emoji
+    moonElement.innerHTML = ":new_moon: New Moon";
+  }
+}
+
 function displayForecast(response) {
   console.log(response.data);
-  let forecast = response.data.daily;
 
+  getMoonPhase(response.data.daily[0].moon_phase);
+
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -65,8 +86,6 @@ function displayForecast(response) {
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
-  let moonElement = document.querySelector("#moonphase");
-  moonElement.innerHTML = response.data.daily[0].moon_phase;
 }
 
 function getForecast(coordinates) {
@@ -106,6 +125,7 @@ function displayTemperature(response) {
 
   getForecast(response.data.coord);
 }
+
 function search(city) {
   let apiKey = "898368c8b82c44ea298ea746725fa93a";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
