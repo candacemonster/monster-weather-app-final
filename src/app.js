@@ -34,22 +34,22 @@ function getMoonPhase(moon_phase) {
   if (moon_phase < 0.25) {
     moonElement.innerHTML = "\uD83C\uDF12";
     //waxing cresent
-  } else if ((moon_phase = 0.25)) {
+  } else if (moon_phase <= 0.25) {
     moonElement.innerHTML = "\uD83C\uDF13";
     //first quarter
   } else if (moon_phase > 0.25 && moon_phase < 0.5) {
     moonElement.innerHTML = "\uD83C\uDF14";
     //waxing gibbous
-  } else if ((moon_phase = 0.5)) {
+  } else if (moon_phase <= 0.5) {
     moonElement.innerHTML = "\uD83C\uDF15";
     //full moon
   } else if (moon_phase > 0.5 && moon_phase < 0.75) {
     moonElement.innerHTML = "\uD83C\uDF16";
     //waning gibbous
-  } else if ((moon_phase = 0.75)) {
+  } else if (moon_phase <= 0.75) {
     moonElement.innerHTML = "\uD83C\uDF17";
     //last quarter
-  } else if (moon_phase > 0.75 && moon_phase < 1) {
+  } else if (moon_phase > 0.75 && moon_phase < 0) {
     moonElement.innerHTML = "\uD83C\uDF18";
     //waning cresent
   } else if (moon_phase > 0 && moon_phase < 1) {
