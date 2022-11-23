@@ -33,7 +33,7 @@ function getMoonPhase(moon_phase) {
   let moonElement = document.querySelector("#moonphase");
   if (moon_phase < 0.25) {
     moonElement.innerHTML = "\uD83C\uDF12";
-    //waxing cresent
+    //waxing crescent
   } else if (moon_phase <= 0.25) {
     moonElement.innerHTML = "\uD83C\uDF13";
     //first quarter
@@ -51,7 +51,7 @@ function getMoonPhase(moon_phase) {
     //last quarter
   } else if (moon_phase > 0.75 && moon_phase < 0) {
     moonElement.innerHTML = "\uD83C\uDF18";
-    //waning cresent
+    //waning crescent
   } else if (moon_phase > 0 && moon_phase < 1) {
     moonElement.innerHTML = "\uD83C\uDF11";
     //new moon
