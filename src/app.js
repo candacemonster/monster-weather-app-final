@@ -49,10 +49,10 @@ function getMoonPhase(moon_phase) {
   } else if (moon_phase <= 0.75) {
     moonElement.innerHTML = "\uD83C\uDF17";
     //last quarter
-  } else if (moon_phase > 0.75 && moon_phase < 0) {
+  } else if (moon_phase > 0.76 && moon_phase < 0.99) {
     moonElement.innerHTML = "\uD83C\uDF18";
     //waning crescent
-  } else if (moon_phase > 0 && moon_phase < 1) {
+  } else if (moon_phase > 0 || moon_phase < 1) {
     moonElement.innerHTML = "\uD83C\uDF11";
     //new moon
   }
