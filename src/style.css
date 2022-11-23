@@ -58,7 +58,7 @@ a:any-link {
 }
 
 .left-container {
-  padding-right: 22px;
+  padding-right: 20px;
 }
 
 .right-container {
@@ -87,7 +87,7 @@ a:any-link {
 }
 
 .weather-app {
-  padding: 8px;
+  padding: 5px;
 }
 .weather-temperature img {
   height: 68px;
@@ -105,7 +105,7 @@ a:any-link {
   top: -14px;
 }
 .combo-temp-units {
-  margin-top: 22px;
+  margin-top: 24px;
 }
 .weather-temperature .active {
   color: rgb(255, 243, 228);
@@ -123,8 +123,8 @@ a:any-link {
 
 .sun li {
   text-align: center;
-  font-size: 12px;
-  margin-top: 25px;
+  font-size: 14px;
+  margin-top: 18px;
 }
 .forcast {
   margin-top: 20px;
@@ -145,16 +145,16 @@ a:any-link {
 }
 
 .daily-highlight {
-  padding: 8px;
+  padding: 2px;
   margin-top: 35px;
 }
 
 .daily-items {
-  font-size: 12px;
   text-align: center;
-  padding-top: 18px;
+  font-size: 14px;
+  margin-top: 18px;
 }
 .daily {
-  margin-top: 25px;
-  font-size: 12px;
+  font-size: 14px;
+  margin-top: 18px;
 }
