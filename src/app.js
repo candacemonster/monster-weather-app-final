@@ -31,20 +31,30 @@ function formatDay(timestamp) {
 
 function getMoonPhase(moon_phase) {
   let moonElement = document.querySelector("#moonphase");
-  if (moon_phase <= 0.25) {
-    //quarter moon emoji
-    moonElement.innerHTML = ":first_quarter_moon: First Quarter";
-  } else if (moon_phase <= 0.5) {
-    //half moon emoji
-    moonElement.innerHTML = ":full_moon: Full";
-  } else if (moon_phase <= 0.75) {
-    //three quarters moon emoji
-    moonElement.innerHTML = ":last_quarter_moon: Last Quarter";
+  if (moon_phase < 0.25) {
+    moonElement.innerHTML = "\uD83C\uDF12";
+    //waxing cresent
+  } else if ((moon_phase = 0.25)) {
+    moonElement.innerHTML = "\uD83C\uDF13";
+    //first quarter
+  } else if (moon_phase > 0.25 && moon_phase < 0.5) {
+    moonElement.innerHTML = "\uD83C\uDF14";
+    //waxing gibbous
+  } else if ((moon_phase = 0.5)) {
+    moonElement.innerHTML = "\uD83C\uDF15";
+    //full moon
+  } else if (moon_phase > 0.5 && moon_phase < 0.75) {
+    moonElement.innerHTML = "\uD83C\uDF16";
+    //waning gibbous
+  } else if ((moon_phase = 0.75)) {
+    moonElement.innerHTML = "\uD83C\uDF17";
+    //last quarter
   } else if (moon_phase > 0.75 && moon_phase < 1) {
     moonElement.innerHTML = "\uD83C\uDF18";
+    //waning cresent
   } else if (moon_phase > 0 && moon_phase < 1) {
-    //full moon emoji
-    moonElement.innerHTML = ":new_moon: New Moon";
+    moonElement.innerHTML = "\uD83C\uDF11";
+    //new moon
   }
 }
 
